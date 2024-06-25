@@ -21,10 +21,100 @@
         height: 80px;
       }
 
+      .whatsapp-solution-icon {
+        max-height: 4.3vw;
+      }
+
       @media (min-width: 768px) { 
        .cta-get-limited-trial {
           width: 500px !important;
         } 
+
+        .whatsapp-solution-icon {
+          max-height: 3.1vw !important;
+        }
+
+        .meta-bsp-icon {
+          max-height: 3.3vw !important;
+          margin-top: 0px !important;
+        }
+      }
+
+      @media (min-width: 1439px) { 
+        .brand-box-lg {
+          height: 131px !important;
+          background-size: 91px !important;
+        }
+
+        .whatsapp-solution-icon {
+          max-height: 2.1vw !important;
+        }
+
+        .meta-bsp-icon {
+          max-height: 3.3vw !important;
+          margin-top: -13px !important;
+        }
+      }
+
+      @media (min-width: 2550px) { 
+        .brand-box-lg {
+          height: 151px !important;
+          background-size: 101px !important;
+        }
+
+        .meta-bsp-icon {
+          max-height: 3.3vw !important;
+          margin-top: -23px !important;
+        }
+      }
+
+      @media (min-width: 1441px) { 
+        .text-xxxl-center {
+          font-size: calc(1.3rem + .3vw) !important;
+          text-align: center !important;
+        }
+
+        .justify-content-xxxl-center {
+          justify-content: center !important;
+        }
+      }
+
+      /* Custom scrollbar for Webkit Browsers */
+      ::-webkit-scrollbar {
+        margin-top: 10px;
+        width: 6px; /* Width of the scrollbar */
+        border-radius: 15px; /* Rounded corners on the thumb */
+      }
+
+      ::-webkit-scrollbar-track {
+        margin-top: 10px;
+        background: #6633FF; /* Color of the track */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        margin-top: 10px;
+        background: #6633FF; /* Color of the thumb */
+        border-radius: 15px; /* Rounded corners on the thumb */
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        margin-top: 10px;
+        background: #6633FF; /* Color of the thumb when hovered */
+        border-radius: 15px; /* Rounded corners on the thumb */
+      }
+
+      /* Custom scrollbar for Firefox */
+      * {
+        scrollbar-width: thin; /* "auto" or "thin" */
+        scrollbar-color: #6633FF transparent; /* Thumb and track color */
+      }
+
+      .email-link:hover {
+        cursor: pointer;
+      }
+
+      .text-secondary {
+        color: #999999 !important;
       }
     </style>
     <script>
@@ -102,22 +192,22 @@
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="/images/1engage-logo.svg" alt="Bootstrap" height="24" style="margin-left: 24px; float: right;">
+          <img src="/images/1engage-logo.webp" alt="Bootstrap" height="24" style="margin-left: 24px; float: right;">
         </a>
       </div>
     </nav>
     <main class="container-fluid justify-content-center">
-      <div class="row pb-4" style="height: auto; background-image: url('/images/hero-image.svg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+      <div class="row pb-4" style="height: auto; background-image: url('/images/hero-image.webp'); background-position: center; background-repeat: no-repeat; background-size: cover;">
         <div class="col">
           <div class="row">
             <div class="col-12 px-md-5 px-4 py-3">
-              <img src="/images/hero-image-top.svg" alt="WhatsApp Solutions">
+              <img class="whatsapp-solution-icon" src="/images/hero-image-top.webp" alt="WhatsApp Solutions">
             </div>
             <div class="col-12 p-3 text-center">
-              <img src="/images/hero-image-center.svg" alt="Chat Images" class="w-100" height="275">
+              <img src="/images/hero-image-center.webp" style="max-width: 49vw;" alt="Chat Images">
             </div>
             <div class="col-12 p-3 text-right">
-              <img class="position-absolute translate-middle-y" src="/images/hero-image-bottom.svg" alt="Meta Business Partner" height="41" style="right: 1rem;">
+              <img class="position-absolute translate-middle-y meta-bsp-icon" src="/images/hero-image-bottom.webp" alt="Meta Business Partner" style="right: 1rem; max-height: 1.5vh;">
             </div>
           </div>
         </div>
@@ -135,12 +225,12 @@
         </div>
         <div class="col-12 mt-4 text-center">
           <a class="btn btn-success cta-get-limited-trial" style="border-radius: 4 !important; padding-top: 11.5px;">
-            <text style="align-items: center; display: inline-flex;"><img src="/images/whatsapp-icon-small.svg" style="margin-right: 7px;">Get Limited FREE Trial</text>
+            <text style="align-items: center; display: inline-flex;"><img src="/images/whatsapp-icon-small.webp" style="margin-right: 7px; max-height: 26px;">Get Limited FREE Trial</text>
           </a>
         </div>
       </div>
       <div class="row mt-5 px-md-5">
-        <div class="col-12">
+        <div class="col-12 text-xxxl-center">
           <h4>
             Trusted by our clients
           </h4>
@@ -148,11 +238,10 @@
         <div class="col-12">
           <div class="row d-none d-lg-flex">
             <script>
-              for (let index = 2; index < 25; index++) {
+              for (let index = 1; index <= 16; index++) {
                 document.write(`
-                  <div class="col-sm-4 col-md-3 d-none d-lg-flex p-3 text-center">
-                    <div class="border rounded w-100 p-4 align-items-center d-block" style="height: 73px;">
-                      <img src="/images/clients/${index}.png" class="h-100">
+                  <div class="col-sm-4 col-md-3 col-lg-2 d-none d-lg-flex p-3 text-center">
+                    <div class="border rounded w-100 p-4 align-items-center d-block brand-box-lg" style="height: 73px; background-image: url('/images/clients/${index}.webp'); background-size: 70px; background-repeat: no-repeat; background-position: center;">
                     </div>
                   </div>
                 `);
@@ -162,11 +251,11 @@
           <div class="row d-flex d-lg-none overflow-auto gap-3 py-2" style="padding-right: 20px;">
             <div class="d-flex gap-3">
               <script>
-                for (let index = 2; index < 24; index++) {
+                for (let index = 1; index <= 16; index++) {
                   document.write(`
-                  <div style="flex: 1 0 200px; display: flex; align-items: center; justify-content: center;" class="brand-container-list border rounded text-center">
-                    <img src="/images/clients/${index}.png" style="max-width: 75px" class="align-middle">
-                  </div>
+                    <div style="flex: 1 0 200px; display: flex; align-items: center; justify-content: center;" class="brand-container-list border rounded text-center">
+                      <img src="/images/clients/${index}.webp" style="max-width: 75px" class="align-middle">
+                    </div>
                   `);
                 }
               </script>
@@ -175,14 +264,14 @@
         </div>
       </div>
       <div class="row mt-5 px-md-5">
-        <div class="col-12">
+        <div class="col-12 text-xxxl-center">
           <h4>
             Elevate your day-to-day operational efficiency
           </h4>
         </div>
       </div>
       <div class="row d-flex overflow-auto gap-3 px-md-5 mt-2">
-        <div class="d-flex gap-3">
+        <div class="d-flex gap-3 justify-content-xxxl-center">
           <div class="d-flex justify-content-center gap-3" style="padding-right: 20px;">
             <script>
               for (const vp in valuePropositions) {
@@ -204,7 +293,7 @@
         </div>
       </div>
       <div class="row mt-5 px-md-5">
-        <div class="col-12">
+        <div class="col-12 text-xxxl-center">
           <h4>
             How we support businesses like yours
           </h4>
@@ -245,22 +334,64 @@
       </div>
       <div class="row">
         <div class="col-12 mt-5 py-4" style="background-image: url('/images/Closing\ [Desktop].webp'); background-position: center; background-size: cover; height: 626px;">
-            <div class="row">
+            <div class="row h-100">
             <div class="col-12 text-center">
-              <img src="/images/hero-image-bottom.svg">
+              <img src="/images/hero-image-bottom.webp" style="max-height: 55px;">
               <h4 class="text-white mt-3">Grow your business faster with 1Engage</h4>
             </div>
-            <div class="col-12 text-center d-flex flex-column align-items-center">
-              <img src="/images/hero-image-top.svg" style="height: 23px;">
-              <span class="text-white mt-3 text-center">Let us show you how our solutions can boost your bottom line!</span>
-              <span class="align-items-center mt-2 text-center">
-                <a class="btn btn-success cta-get-limited-trial" style="border-radius: 4 !important; padding-top: 11.5px;">
-                  <text style="align-items: center; display: inline-flex;">
-                    <img src="/images/whatsapp-icon-small.svg" style="margin-right: 7px;">
-                    Get Limited FREE Trial
-                  </text>
+            <div class="col-12 text-center d-flex flex-column">
+              <div class="mt-auto d-flex flex-column align-items-center">
+                <img src="/images/hero-image-top.webp" style="height: 23px;">
+                <span class="text-white mt-3">Let us show you how our solutions can boost your bottom line!</span>
+                <a class="btn btn-success cta-get-limited-trial mt-2" style="border-radius: 4 !important; padding-top: 11.5px;">
+                  <text style="align-items: center; display: inline-flex;"><img src="/images/whatsapp-icon-small.webp" style="margin-right: 7px; max-height: 26px;">Get Limited FREE Trial</text>
                 </a>
-              </span>
+              </div>
+            </div>        
+          </div>
+        </div>
+      </div>
+      <div class="row py-5 px-3 px-md-5 py-md-5" style="background-color: #F2F2F2;">
+        <div class="col-12 col-md mb-4">
+          <img src="/images/1engage-logo.webp" alt="1Engage" style="height: 25px;">
+        </div>
+        <div class="col-12 col-md mb-4">
+          <div class="row">
+            <div class="d-flex flex-column gap-2">
+              <span class="fw-bold text-secondary">Email</span>
+              <a href="mailto:hello@1engage.ai" class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover email-link">hello@1engage.ai</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-4">
+          <div class="row">
+            <div class="d-flex flex-column gap-2">
+              <span class="fw-bold text-secondary">Address</span>
+              <p class="lh-lg mb-0">
+                Sinarmas Land Plaza Tower 1
+                Jl. MH. Thamrin No.51, Menteng,
+                Jakarta Pusat 10340
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-4">
+          <div class="row">
+            <div class="d-flex flex-column gap-2">
+              <span class="fw-bold text-secondary">Explore</span>
+              <a href="https://www.1engage.ai/blog/categories/trend-insights" class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover email-link text-black">Insigths</a>
+              <a href="https://www.1engage.ai/privacy-policy" class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover email-link text-black">Privacy Policy</a>
+              <a href="https://www.1engage.ai/" class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover email-link text-black">About Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-4">
+          <div class="row">
+            <div class="d-flex flex-column gap-2">
+              <span class="fw-bold text-secondary">Social Media</span>
+              <a href="https://www.instagram.com/1engage.ai/" target="_blank" class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover email-link text-black">Instagram</a>
+              <a href="https://www.linkedin.com/company/1engage" target="_blank" class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover email-link text-black">Linkedin</a>
+              <a href="https://www.1engage.ai/" target="_blank" class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover email-link text-black">Facebook</a>
             </div>
           </div>
         </div>
