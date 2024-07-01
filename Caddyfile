@@ -1,0 +1,9 @@
+dev-fnb.1engage.ai {
+  root * /path/to/fnb
+  file_server browse
+}
+
+dev-entertainment.1engage.ai {
+  root * /path/to/entertainment
+  file_server browse
+}
