@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   caddy:
-    container_name: fnb
+    container_name: caddy-server
     image: caddy:latest
     ports:
       - 80:80
