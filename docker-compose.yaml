@@ -9,4 +9,4 @@ services:
       - 443:443
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
-      - ./fnb:/var/www/html
+      - ./fnb:/var/www/fnb
